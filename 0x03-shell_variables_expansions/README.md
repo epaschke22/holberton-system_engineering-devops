@@ -1,0 +1,1 @@
+These are the answers and submitions for project 0x03 which is about Shell's variables and expansions.
