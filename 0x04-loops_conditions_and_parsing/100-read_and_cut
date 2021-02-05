@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#reads and cuts out parts of the passwd file
+while read -r line;
+do
+    echo "$line" | cut -d ':' -f 1,4,6
+done < /etc/passwd

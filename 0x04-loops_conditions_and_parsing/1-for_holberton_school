@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #prints holberton school 10 times with for loop
 for _ in 1 1 1 1 1 1 1 1 1 1; 
 do

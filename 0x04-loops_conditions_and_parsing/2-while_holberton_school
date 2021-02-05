@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #prints holberton school 10 times with while loop
 i=0
 while [ $i -ne 10 ]

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #prints 1 though 20 with conditions for 4, 9, and 17
 i=1
 while [ $i -ne 21 ]
