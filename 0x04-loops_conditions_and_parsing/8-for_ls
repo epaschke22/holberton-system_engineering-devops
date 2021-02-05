@@ -2,5 +2,5 @@
 #prints ls but with all number feilds cut out
 for f in *; 
 do
-    echo $f | cut -d '-' -f 2
+    echo "$f" | cut -d '-' -f 2
 done
