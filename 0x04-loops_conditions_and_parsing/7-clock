@@ -1,0 +1,14 @@
+#!/bin/bash
+#prints hours 0-12 with minute 1-59 between each hour
+hour=0
+while [ $hour -ne 13 ]
+do
+    echo "Hour: "$hour
+    minute=1
+    while [ $minute -ne 60 ]
+    do
+        echo $minute
+        minute=$((minute+1))
+    done
+    hour=$((hour+1))
+done

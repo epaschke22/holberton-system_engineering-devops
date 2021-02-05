@@ -1,0 +1,6 @@
+#!/bin/bash
+#prints holberton school 10 times with for loop
+for _ in 1 1 1 1 1 1 1 1 1 1; 
+do
+    echo "Holberton School"
+done
