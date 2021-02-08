@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# prints a message over and over, inserts new message with sigterm
+pkill -SIGKILL -f 7-highlander
