@@ -1,8 +1,7 @@
 # edits a config file
 file_line{'disable password login':
-  ensure => 'absent'
   path   => '/etc/ssh/ssh_config',
-  line   => 'PasswordAuthentication yes',
+  line   => 'PasswordAuthentication no',
 }
 
 file_line{'set ssh identity file':
