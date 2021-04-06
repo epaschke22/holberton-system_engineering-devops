@@ -7,7 +7,6 @@ sudo ufw default allow
 sudo ufw allow 'Nginx HTTP'
 echo "y" | sudo ufw enable
 sudo sh -c 'echo "Holberton School for the win!" > /var/www/html/index.html'
-sudo service nginx restart
 
 new_string="rewrite ^/redirect_me/$ https://www.youtube.com/watch?v=xhjXxGDoKUQ permanent;"
 sudo sed -i "/listen \[::\]:80 default_server;/a $new_string" /etc/nginx/sites-enabled/default
