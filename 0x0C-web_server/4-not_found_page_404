@@ -10,6 +10,6 @@ sudo mkdir /var/www/html/redirect_me
 new_string="rewrite ^/redirect_me/$ https://www.youtube.com/watch?v=xhjXxGDoKUQ permanent;"
 sudo sed -i "/listen \[::\]:80 default_server;/a $new_string" /etc/nginx/sites-enabled/default
 sudo touch /var/www/html/404.html
-sudo echo "Ceci n'est pas une page" | tee /var/www/html/404.html
-sudo sed -i "/listen \[::\]:80 default_server;/a error_page 404 /404.html" /etc/nginx/sites-enabled/default
+sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+sudo sed -i "/listen \[::\]:80 default_server;/a error_page 404 /404.html;" /etc/nginx/sites-enabled/default
 sudo service nginx restart
