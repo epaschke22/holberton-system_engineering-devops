@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# configures the nginX congif to re direct a webpage
+new_string="rewrite ^/redirect_me https://www.youtube.com/watch?v=xhjXxGDoKUQ"
+sudo sed -i "/listen [::]:80 default_server;/a $new_string/" /etc/nginx/sites-enabled/default
