@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# configures the nginX sever
+sudo apt-get install --no-install-recommends software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-1.6
+sudo apt-get -y install haproxy=1.6.\*
+sudo chmod 0777 /etc/haproxy/haproxy.cfg
+printf '%s\n' \
+'' \
+'frontend http_frontend'\
+'   bind *:80' \
+'   status uri /haproxy?stats' \
+'   default_backend http_rear' \
+'' \
+'backend http_rear' \
+'   balance roundrobin' \
+'   sever web-01 34.75.67.199:80 check' \
+'   sever web-02 35.237.13.196:80 check' \
+> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
