@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# configures the nginX sever to have a 404 page
+# configures the nginX sever
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw default allow
