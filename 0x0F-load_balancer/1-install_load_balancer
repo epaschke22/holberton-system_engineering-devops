@@ -9,7 +9,7 @@ printf '%s\n' \
 '' \
 'frontend http_frontend' \
 '   bind *:80' \
-'   status uri /haproxy?stats' \
+'   stats uri /haproxy?stats' \
 '   default_backend http_rear' \
 '' \
 'backend http_rear' \
