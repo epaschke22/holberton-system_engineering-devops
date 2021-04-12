@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # configures the nginX sever
-sudo apt-get install --no-install-recommends software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-1.6
+sudo apt-get install -y --no-install-recommends software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-1.6
 sudo apt-get -y install haproxy=1.6.\*
 sudo chmod 0777 /etc/haproxy/haproxy.cfg
 printf '%s\n' \
