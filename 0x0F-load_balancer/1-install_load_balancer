@@ -17,4 +17,5 @@ printf '%s\n' \
 '   sever web-01 34.75.67.199:80 check' \
 '   sever web-02 35.237.13.196:80 check' \
 >> /etc/haproxy/haproxy.cfg
+sudo echo "ENABLED=1" >> /etc/default/haproxy
 sudo service haproxy restart
