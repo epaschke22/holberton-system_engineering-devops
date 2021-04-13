@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# fixes the sever to make all channels listen to port 80 without nginX
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
+rm /run/nginx.pid
