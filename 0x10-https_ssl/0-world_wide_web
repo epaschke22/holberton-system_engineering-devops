@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Configure a domain
+if [ $# -eq 1 ]; then
+    subs=("www" "lb-01" "web-01" "web-02")
+    for val in "${subs[@]}"; do
+        rec="$(dig "$val"."$1" | grep -A1 'ANSWER SECTION:' | awk '{ printf $4 }')"
+        ipa="$(dig "$val"."$1" | grep -A1 'ANSWER SECTION:' | awk '{ printf $5 }')"
+        printf "The subdomain %s is a %s record and points to %s" "$val" "$rec" "$ipa"
+    done
+elif [ $# -eq 2 ]; then
+    rec="$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | awk '{ printf $4 }')"
+    ipa="$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | awk '{ printf $5 }')"
+    printf "The subdomain %s is a %s record and points to %s" "$2" "$rec" "$ipa"
+fi
